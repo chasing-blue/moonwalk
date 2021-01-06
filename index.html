@@ -2,20 +2,16 @@
 <h3> git commit </h3>	
   	git commit --file ..\commitmsg.txt   
   	<br>git commit --amend --no-edit
-
 <h3> git merge </h3>	
 	git merge --no-commit --no-ff --strategy ours ab4626ed8
 	<br>git merge --no-commit --strategy recursive -X ours --no-ff 82384648ed
 	<br>git merge --abort
-	 
 <h3> git checkout </h3>	
 	git checkout -- src/something.txt     /**< (discard the local change)  */
-	
 <h3> git log </h3>	
 	git log --name-status  --oneline ./src/green.c
 	<br>git log --invert-grep --grep="update" --no-merges --oneline my_branch/merge_1
 	<br>git log --name-status  --oneline --follow ./src/renamed.txt /**< for renamed file */
-                                                                                      
 <h3> git config </h3>	
 	git config --list --show-origin
 	<br>git config --global alias.logad 'log --oneline --decorate --graph --all'
@@ -24,14 +20,14 @@
 	<br>--local (Use this for stand-alone repositories, the configuration will be saved to the .git/ directory at the root of the repo itself)
 	<br>--global (Use this for configuration settings you wish to apply to all repositories under a user account)
 	<br>--system (Use this for configuration settings you wish to apply system-wide (To all users))
-
 <h3> git grep </h3>	
 	git grep --break --heading --show-function -n "function_name" -- *.[ch]
-	
 <h3> git reset </h3>	
 	git reset --hard HEAD --recurse-submodules
 <h3> Git submodule </h3>
 	git submodule update --recursive
+<h3> git branch </h3>
+	git branch -vv
 <h3> Git reference </h3>
 	<a href="https://git-scm.com/">Git-scm</a>
 

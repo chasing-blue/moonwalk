@@ -15,7 +15,9 @@
 <h3> git config </h3>	
 	git config --list --show-origin
 	<br>git config --global alias.logad 'log --oneline --decorate --graph --all'
-	<br>git config --system --list --show-origin  
+	<br>git config --system --list --show-origin 
+	<br>git config --global merge.tool p4merge
+	<br>git config --global mergetool.keepBackup false
 	<br>
 	<br>--local (Use this for stand-alone repositories, the configuration will be saved to the .git/ directory at the root of the repo itself)
 	<br>--global (Use this for configuration settings you wish to apply to all repositories under a user account)

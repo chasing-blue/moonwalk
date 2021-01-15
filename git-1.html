@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+<a href="./index.html">home</a>   <a href="./git-2.html">git 2</a>  <a href="./regex.html">regex</a> <a href="./relax.html">relax...</a>
+<h3> git commit </h3>	
+  	git commit --file ..\commitmsg.txt   
+  	<br>git commit --amend --no-edit
+<h3> git diff </h3>
+	git diff    /**< working tree -- staged */ <br>
+	git diff --cached     /**< staged -- HEAD */ <br>
+	git diff HEAD /**< working tree -- HEAD */ <br>
+	git diff ^<commit older> <commit newer> 
+<h3> git merge </h3>	
+	git merge --no-commit --no-ff --strategy ours ab4626ed8
+	<br>git merge --no-commit --strategy recursive -X ours --no-ff 82384648ed
+	<br>git merge --abort
+<h3> git checkout </h3>	
+	git checkout -- src/something.txt     /**< (discard the local change)  */
+<h3> git log </h3>	
+	git log --name-status  --oneline ./src/green.c
+	<br>git log --invert-grep --grep="update" --no-merges --oneline my_branch/merge_1
+	<br>git log --name-status  --oneline --follow ./src/renamed.txt /**< for renamed file */
+<h3> git config </h3>	
+	git config --list --show-origin
+	<br>git config --global alias.logad 'log --oneline --decorate --graph --all'
+	<br>git config --system --list --show-origin 
+	<br>git config --global merge.tool p4merge
+	<br>git config --global mergetool.keepBackup false
+	<br>
+	<br>--local (Use this for stand-alone repositories, the configuration will be saved to the .git/ directory at the root of the repo itself)
+	<br>--global (Use this for configuration settings you wish to apply to all repositories under a user account)
+	<br>--system (Use this for configuration settings you wish to apply system-wide (To all users))
+</body>
+</html>
